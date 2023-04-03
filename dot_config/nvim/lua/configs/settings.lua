@@ -145,3 +145,18 @@ function map(mode, lhs, rhs, opts)
 map('n', 'gn', '<cmd>lua require("cosmic-ui").rename()<cr>')
 map('n', '<leader>ga', '<cmd>lua require("cosmic-ui").code_actions()<cr>')
 map('v', '<leader>ga', '<cmd>lua require("cosmic-ui").range_code_actions()<cr>')
+
+
+In_action = 0
+vim.keymap.set('n', '<leader>gm',function()
+    if In_action == 1 then
+      In_action = 0
+      vim.cmd([[:autocmd! CursorMoved]])
+      vim.cmd([[:call clearmatches()]])
+    else
+      In_action = 1
+      vim.cmd([[:autocmd CursorMoved * silent! exe printf('match Search /\<%s\>/', expand('<cword>'))]])
+    end
+  
+  end
+, {})
