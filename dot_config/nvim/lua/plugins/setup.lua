@@ -73,20 +73,30 @@ require('lazy').setup({
       },
     },
 
+    { "MunifTanjim/nui.nvim" },
+
+    {
+      'CosmicNvim/cosmic-ui',
+      requires = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
+      -- config = function()
+      --   require('cosmic-ui').setup()
+      -- end,
+    },
+
 
     -- CMD line alternative
-    {
-      "folke/noice.nvim",
-      config = function()
-        require("noice").setup({
-          -- add any options here
-        })
-      end,
-      dependencies = {
-        { "MunifTanjim/nui.nvim" },
-        { "rcarriga/nvim-notify" },
-      },
-    },
+    -- {
+    --   "folke/noice.nvim",
+    --   config = function()
+    --     require("noice").setup({
+    --       -- add any options here
+    --     })
+    --   end,
+    --   dependencies = {
+    --     { "MunifTanjim/nui.nvim" },
+    --     { "rcarriga/nvim-notify" },
+    --   },
+    -- },
 
     {require "plugins.debug"},
     -- {require "plugins.autoformat"}

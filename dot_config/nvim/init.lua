@@ -33,7 +33,7 @@ require 'configs.lsp'
 require 'configs.nvim-cmp'
 require 'configs.telescope'
 require 'configs.treesitter'
-require 'configs.lualine'
+-- require 'configs.lualine'
 
 vim.fn.sign_define('DapBreakpoint', {text='🅱️', texthl='red', linehl='', numhl=''})
 

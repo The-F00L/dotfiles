@@ -9,6 +9,8 @@
 return {
     -- NOTE: Yes, you can install new plugins here!
     'mfussenegger/nvim-dap',
+    "williamboman/mason.nvim",
+    "jay-babu/mason-nvim-dap.nvim",
   
     -- NOTE: And you can specify dependencies as well
     dependencies = {
