@@ -134,6 +134,12 @@ vim.keymap.set('n', 'ff', require('telescope.builtin').find_files, {})
 vim.keymap.set('n', 'fg', require('telescope.builtin').git_files, {})
 vim.keymap.set('n', 'hp', require('telescope.builtin').help_tags, {})
 
+vim.keymap.set({ 'n', 'v' }, '<leader>]', ':Gen<CR>')
+-- <C-x> go to file selection as a split   
+-- <C-v> go to file selection as a vsplit   
+-- <C-t> go to a file in a new tab
+
+
 function map(mode, lhs, rhs, opts)
     local options = { noremap = true, silent = true }
     if opts then
